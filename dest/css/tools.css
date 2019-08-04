@@ -1,0 +1,22 @@
+body {
+  margin: 0 0;
+  background-color: #00c3ff;
+}
+
+button {
+  margin: 1vh 1vw;
+  font-size: 10vh;
+  color: white;
+  width:48vw;
+  height:48vh;
+  float:left;
+  border: 0;
+  border-radius: 7vh;
+  background-color: #3455eb;
+  box-shadow: 1vw 1vh #000;
+}
+
+button:active{
+   transform: translate(1vw,1vh);
+   box-shadow:0 0;
+}

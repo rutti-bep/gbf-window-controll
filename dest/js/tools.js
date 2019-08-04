@@ -16,7 +16,7 @@ $(function() {
     $linkButtons.append(newButton);
   }
  
-  addButton("https://twitter.com/","ついったー");
+//  addButton("https://twitter.com/","ついったー");
   addButton("http://game.granbluefantasy.jp/#quest/supporter/800011/22","CPクエ");
   addButton("http://game.granbluefantasy.jp/#coopraid","共闘");
 
