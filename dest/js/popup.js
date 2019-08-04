@@ -3,7 +3,7 @@ $(function() {
   var toolsPopupButton = $("#tools-popup-button");
 
   gbfPopupButton.click(()=>{
-    chrome.runtime.sendMessage({"method":"gbfOpen","url":"https://twitter.com/home"}); 
+    chrome.runtime.sendMessage({"method":"gbfOpen"}); 
   });
 
   toolsPopupButton.click(()=>{
