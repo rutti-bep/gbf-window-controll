@@ -61,6 +61,11 @@ function GBFOpen(){
   }
 }
 
+function ToolsWindowReset(){
+  ToolsWindowId = null;
+  console.log("tool-removed");
+}
+
 function ToolsOpen(){
   if(ToolsWindowId == null){
     chrome.windows.create({url:"dest/html/tools.html",type:"popup",width:300,height:300},
@@ -68,7 +73,7 @@ function ToolsOpen(){
           ToolsWindowId = _window.id;
         });
     chrome.windows.onRemoved.addListener((ToolsWindowId)=>{
-      ToolsWindowId  = null;
+      ToolsWindowReset();
     });
   }else{
     chrome.windows.update(ToolsWindowId,{focused:true});
