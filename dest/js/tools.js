@@ -1,7 +1,12 @@
 $(function() {
   var $linkButtons = $("#link-buttons"); 
-  console.log($linkButtons);
-  
+
+  var $reloadButton = $("#reload-button");
+  var $backButton = $("#back-button"); 
+
+  $reloadButton.on("click",()=>{chrome.runtime.sendMessage({"method":"GBFWindowReload"});});
+  $backButton.on("click",()=>{chrome.runtime.sendMessage({"method":"GBFWindowBack"});});
+
   function addButton(url,text){
     var newButton = document.createElement('button');
     $(newButton).text(text);

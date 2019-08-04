@@ -15,6 +15,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       GBFWindowUrl = request.url;
       GBFOpen();
       break;
+    case "GBFWindowReload":
+      if(GBFWindowObjectId !== null){
+        chrome.windows.get(GBFWindowObjectId,{populate:true},(_window)=>{
+          chrome.tabs.reload(_window.tabs[0].id);
+        });
+      }
+      break;
+    case "GBFWindowBack":
+      if(GBFWindowObjectId !== null){
+        chrome.windows.get(GBFWindowObjectId,{populate:true},(_window)=>{
+          console.log("back");
+          chrome.tabs.goBack(_window.tabs[0].id);
+        });
+      }
+      break;
   };
   sendResponse(response);
 });
