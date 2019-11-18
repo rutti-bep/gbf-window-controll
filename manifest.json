@@ -11,6 +11,7 @@
       "dest/js/background.js"
     ]
   },
+  "options_page": "dest/html/options.html",
   "permissions": [
     "storage",
     "tabs"
