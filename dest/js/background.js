@@ -45,8 +45,8 @@ function GBFOpen(){
         (_window)=>{
           GBFWindowObjectId  = _window.id;
         });
-    chrome.windows.onRemoved.addListener((GBFWindowObjectId)=>{
-      GBFWindowObjectReset();
+    chrome.windows.onRemoved.addListener((deleteWindowId)=>{
+      if(deleteWindowId == GBFWindowObjectId){GBFWindowObjectReset();}
     });
   }else{
     chrome.windows.get(GBFWindowObjectId,{populate:true},(_window)=>{
