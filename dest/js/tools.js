@@ -15,9 +15,13 @@ $(function() {
     });
     $linkButtons.append(newButton);
   }
+
+  let leftButtonUrl = localStorage.getItem("leftButtonUrl") || "http://game.granbluefantasy.jp/";
+  let leftButtonText = localStorage.getItem("leftButtonText") || "グラブル";
+  let rightButtonUrl = localStorage.getItem("rightButtonUrl") || "http://game.granbluefantasy.jp/#coopraid";
+  let rightButtonText = localStorage.getItem("rightButtonText") || "共闘";
  
-//  addButton("https://twitter.com/","ついったー");
-  addButton("http://game.granbluefantasy.jp/#quest/supporter/800011/22","CPクエ");
-  addButton("http://game.granbluefantasy.jp/#coopraid","共闘");
+  addButton(leftButtonUrl,leftButtonText);
+  addButton(rightButtonUrl,rightButtonText);
 
 });
